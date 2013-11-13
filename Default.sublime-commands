@@ -1,6 +1,10 @@
 [
     {
-        "caption": "XPath Find Nodes",
+        "caption": "XPath: find matches",
         "command": "x_path_find"
+    },
+    {
+        "caption": "XPath from element at cursor",
+        "command": "x_path_generate"
     }
 ]

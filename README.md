@@ -1,12 +1,10 @@
-# Sublime Text 2 plugin: XPathFind
+# Sublime Text 3 plugin: XPathFind
 
-XPathFind will search the current view for xml nodes matching a particular xpath expression.
-Run "x_path_find" command and you will be prompted to enter the expression via the input panel.
+This plugin makes two commands available:
 
-## Requirements
+`XPath: find matches` will prompt you to enter an XPath expression and will search the current view for xml nodes that match it.
 
-This plugin uses the lxml library for xpath search.
-<pre>easy_install lxml</pre> should install it.
+`XPath from element at cursor` will create a simple XPath expression from the element at the cursor and will copy it to the clipboard.
 
 ## Install
 
