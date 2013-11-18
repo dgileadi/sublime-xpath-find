@@ -10,8 +10,8 @@ class FileWrapper:
         self.lineno = -1
 
     def read(self, bytes):
-        s = self.source.readline()
         self.lineno += 1
+        s = self.source.readline()
         return s
 
 
@@ -54,9 +54,10 @@ class XPathGenerateCommand(sublime_plugin.TextCommand):
         tag = None
         if region.a > 0:
             pt_str = self.view.substr(region.a - 1)
-            while region.a > 0 and pt_str != ":" and pt_str != "<":
+            while region.a > 0 and pt_str != ":" and pt_str != "<" and pt_str != "/":
                 region.a -= 1
                 pt_str = self.view.substr(region.a - 1)
+        region.b = region.a
         pt_str = self.view.substr(region.b)
         while pt_str != "/" and pt_str != ">" and pt_str != " " and pt_str != "\t" and pt_str != "\n":
             region.b += 1

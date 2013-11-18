@@ -10,8 +10,8 @@ class FileWrapper:
         self.lineno = -1
 
     def read(self, bytes):
-        s = self.source.readline()
         self.lineno += 1
+        s = self.source.readline()
         return s
 
 
